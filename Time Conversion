@@ -1,0 +1,41 @@
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+    string s;
+    cin >> s;
+    string x=s.substr(0,2);
+    int xx=stoi(x);
+    string y=s.substr(2,6);
+    string z=s.substr(8,2);
+    if(z=="PM")
+    {
+        if(xx==12)
+        {
+            xx=xx+0;
+        }
+        else 
+        {
+            xx=xx+12;
+        } 
+        cout<<xx<<y; 
+    }
+    if(z=="AM")
+    {
+        if(xx==12)
+        {
+            cout<<"00"<<y;
+        }
+        else if(xx<10)
+        {
+            cout<<0<<xx<<y;
+        }
+        else {
+        cout<<xx<<y;
+        }
+        
+    } 
+    return 0;
+}
